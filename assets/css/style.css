@@ -12,7 +12,7 @@ main {
     margin-top: 60px;
 }
 
-body:after {
+body::after {
     content: "";
     position: absolute;
     top: 0;
@@ -74,4 +74,37 @@ header img {
 .main-wrapper img {
     height: 300px;
     width: 300px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 82px;
+    margin-top: 75px;
+}
+
+.day-wrapper {
+    width: 250px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 2px gray solid;
+    
+}
+
+.day-wrapper:last-child {
+    border: none;
+}
+
+.day-wrapper img {
+    width: 80px;
+}
+
+.temp-max,
+.temp-min {
+    margin: 5px;
 }
