@@ -8,7 +8,11 @@ body {
     margin: 0;
 }
 
-.container::after {
+main {
+    margin-top: 60px;
+}
+
+body:after {
     content: "";
     position: absolute;
     top: 0;
@@ -34,11 +38,11 @@ h2 {
 
 h3 {
     font-weight: 200;
-    font-size: 90px;
+    font-size: 130px;
 }
 
 p {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .grey {
