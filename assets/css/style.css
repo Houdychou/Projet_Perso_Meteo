@@ -42,6 +42,7 @@ h3 {
 }
 
 p {
+    margin-bottom: 3px;
     font-size: 25px;
 }
 
@@ -69,6 +70,7 @@ header img {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 80px;
 }
 
 .main-wrapper img {
@@ -82,7 +84,6 @@ footer {
     align-items: center;
     justify-content: space-evenly;
     height: 82px;
-    margin-top: 75px;
 }
 
 .day-wrapper {
@@ -107,4 +108,42 @@ footer {
 .temp-max,
 .temp-min {
     margin: 5px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+input {
+    border: 1px solid white;
+    background: transparent;
+    text-align: center;
+    width: 100%;
+    color: white;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.fa-magnifying-glass {
+    color: white;
+    position: absolute;
+    top: 5px;
+    font-size: 23px;
+    left: 10px;
+}
+
+input::placeholder {
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    opacity: 1;
+}
+
+@media screen {
+    
 }
