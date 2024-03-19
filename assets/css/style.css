@@ -128,7 +128,7 @@ input {
     border: 1px solid white;
     background: transparent;
     text-align: center;
-    width: 380px;
+    width: 100%;
     color: white;
     padding: 7px;
     outline: none;
