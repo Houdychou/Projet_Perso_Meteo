@@ -37,10 +37,11 @@ const ImageMeteo = [
 function nameOfDays() {
     let date = new Date();
     let numeroJour = date.getDay();
-    let joursSemaine = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+    let joursSemaine = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let nomJour = joursSemaine[numeroJour];
     return nomJour + ', ' + date.getDate() + 'th';
 }
+
 function meteoFetch(city) {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + apiKey)
     .then(function(res) {
@@ -53,7 +54,7 @@ function meteoFetch(city) {
         const humidity = document.querySelector('.humidity');
         const wind = document.querySelector('.wind');
         const tempCelsius = data.main.temp - 273.15;
-        console.log(nameOfDays())
+        date.textContent = nameOfDays();
         location.textContent = data.name + ', ' + data.sys.country;
         temp.textContent =  + tempCelsius.toFixed(0) + '°C';
         humidity.textContent = 'humidity : ' + data.main.humidity + '%';
@@ -62,26 +63,6 @@ function meteoFetch(city) {
     .catch(function(error) {
         console.log(error);
     })
-        .then(function (res) {
-            return res.json();
-        })
-        .then(function (data) {
-            console.log(data);
-            const date = document.querySelector('.date');
-            const rain = document.querySelector('.rain');
-            const temp = document.querySelector('.temp');
-            const humidity = document.querySelector('.humidity');
-            const wind = document.querySelector('.wind');
-            const tempCelsius = data.main.temp - 274.15;
-            locationElement.textContent = data.name + ', ' + data.sys.country;
-            date.textContent = nameOfDays();
-            temp.textContent = + tempCelsius.toFixed(0) + '°C';
-            humidity.textContent = 'humidity : ' + data.main.humidity + '%';
-            wind.textContent = 'Wind : ' + data.wind.speed + 'km/h';
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
 }
 meteoFetch();
 

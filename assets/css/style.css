@@ -27,7 +27,7 @@ body::after {
     height: 100%;
     background: url(../img/fond-ecran.jpg) no-repeat;
     background-size: cover;
-    filter: brightness(15%);
+    filter: brightness(10%);
     z-index: -1;
 }
 
@@ -131,6 +131,7 @@ input {
     background: transparent;
     text-align: center;
     width: 350px;
+    outline: none;
     color: white;
     padding: 7px;
     border-radius: 10px;
@@ -166,6 +167,7 @@ input::placeholder {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 30px;
     }
 
     .header-container img {
