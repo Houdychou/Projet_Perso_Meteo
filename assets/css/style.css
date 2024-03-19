@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&family=Manrope:wght@200..800&family=Poor+Story&family=Protest+Revolution&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Timmana&display=swap');
+
 * {
     box-sizing: border-box;
     scrollbar-width: none;
@@ -9,12 +10,12 @@ body {
     margin: 0;
 }
 
-main {
-    margin-top: 60px;
-}
-
 .hidden {
     display: none;
+}
+
+main {
+    margin-top: 60px;
 }
 
 body::after {
@@ -30,7 +31,9 @@ body::after {
     z-index: -1;
 }
 
-h2, h3, p {
+h2,
+h3,
+p {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: white;
@@ -99,7 +102,6 @@ footer {
     justify-content: center;
     flex-direction: column;
     border-right: 2px gray solid;
-    
 }
 
 .day-wrapper:last-child {
@@ -128,10 +130,9 @@ input {
     border: 1px solid white;
     background: transparent;
     text-align: center;
-    width: 100%;
+    width: 350px;
     color: white;
     padding: 7px;
-    outline: none;
     border-radius: 10px;
 }
 
@@ -139,7 +140,6 @@ input {
     color: white;
     position: absolute;
     top: 5px;
-    cursor: pointer;
     font-size: 23px;
     left: 10px;
 }
@@ -166,15 +166,10 @@ input::placeholder {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 50px;
     }
 
     .header-container img {
         display: none;
-    }
-
-    input {
-        width: 300px;
     }
 
     .header-container h2 {
@@ -215,6 +210,14 @@ input::placeholder {
         font-size: 20px;
     }
 
+    .humidity {
+        margin-left: 10px;
+    }
+
+    .rain {
+        margin-left: 30px;
+    }
+
     footer {
         border-top: 1px solid grey;
         display: flex;
@@ -228,7 +231,7 @@ input::placeholder {
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 100%;
+        width: 80%;
         justify-content: space-between;
         border-right: none;
         border-bottom: 1px solid grey;
