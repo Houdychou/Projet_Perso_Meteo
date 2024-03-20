@@ -160,6 +160,11 @@ input::placeholder {
     color: #87CEEB;
 }
 
+.error {
+    color: red;
+    font-size: 20px;
+}
+
 @media screen and (max-width: 800px) {
     .header-container {
         height: auto;
@@ -239,7 +244,8 @@ input::placeholder {
         border-bottom: 1px solid grey;
     }
 
-    .day-wrapper .day {
+    .day {
+        margin-right: 30px;
         font-size: 25px;
         width: 100px;
     }
