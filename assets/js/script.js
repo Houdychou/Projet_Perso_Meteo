@@ -20,9 +20,6 @@ function nameOfDays() {
 function meteoFetch(city) {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + apiKey)
     .then(function(res) {
-        if (!res.ok) {
-            throw new Error('City not found');
-        }
         return res.json();
     })
     .then(function(data) {
